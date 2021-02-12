@@ -7,7 +7,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("hello world");
+    setText(data)
   };
   return (
     <div>
@@ -24,18 +24,11 @@ function App() {
         <button type="submit">generate</button>
       </form>
       <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-          similique in. Sed, esse rerum voluptate perferendis sint omnis,
-          repellat consequatur temporibus accusantium in facilis minima placeat
-          minus corporis aliquid iste.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-          similique in. Sed, esse rerum voluptate perferendis sint omnis,
-          repellat consequatur temporibus accusantium in facilis minima placeat
-          minus corporis aliquid iste.
-        </p>
+        {
+          text.map((item, index)=>{
+            return <p key={index}>{item}</p>
+          })
+        }
       </div>
     </div>
   );
